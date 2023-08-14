@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.column {
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  padding: 10px;
+  min-width: 250px;
+  flex: 1;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.column-heading {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #f9f9f9;
+}
+
+.card-count {
+  background-color: #ddd;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    min-width: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+}
